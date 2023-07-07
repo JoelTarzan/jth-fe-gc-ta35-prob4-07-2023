@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'jth-fe-gc-ta35-prob4-07-2023';
+
+  @ViewChild('formulario') formulario: any;
+  @ViewChild('lista') lista: any;
+
+  // Llama a la función correspondiente del componente lista, pasandole el evento emitido del componente formulario
+  enviarTarea($event: any): void {
+    this.lista.agregar($event);
+  }
 }

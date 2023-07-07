@@ -1,0 +1,17 @@
+<div class="my-5">
+    <div class="row mb-3">
+        <label for="titulo" class="col-1">Título:</label>
+        <div class="col-2">
+            <input type="text" class="form-control" id="titulo" [(ngModel)]="titulo">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="descripcion" class="col-1">Descripción:</label>
+        <div class="col-6">
+            <input type="text" class="form-control" id="descripcion" [(ngModel)]="descripcion">
+        </div>
+    </div>
+    <div class="d-flex col-2 justify-content-between mt-4">
+        <input type="button" class="btn btn-primary" value="Agregar" (click)="agrear()">
+    </div>
+</div>
